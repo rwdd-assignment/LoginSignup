@@ -1,4 +1,5 @@
 <?php
+    echo "testing from website";
     session_start();
     if(isset($_COOKIE["loginInfo"])){
         $info = json_decode($_COOKIE["loginInfo"],true);
