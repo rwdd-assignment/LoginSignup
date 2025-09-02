@@ -20,11 +20,11 @@
         <h2>Sign Up</h2>
         <form id="signupForm" action="signupProcess.php" method="post">
             <label for="email">Email <span id="emailAlert" style="color:red; font-size:20px;"><?php if(isset($_SESSION["emailError"])){echo $_SESSION["emailError"];}?></span></label><br>
-            <input type="email" id="email" name="email" value="<?php if(isset($_SESSION["email"])){echo $_SESSION["email"];}?>"><br>
+            <input type="email" id="email" name="email" value="<?php if(isset($_SESSION["email"])){echo $_SESSION["email"];}?>" required><br>
             <label for="username">Username <span id="usernameAlert" style="color:red; font-size:20px;"><?php if(isset($_SESSION["usernameError"])){echo $_SESSION["usernameError"];}?></span></label><br>
-            <input type="text" id="username" name="username" value="<?php if(isset($_SESSION["username"])){echo $_SESSION["username"];}?>"><br>
+            <input type="text" id="username" name="username" value="<?php if(isset($_SESSION["username"])){echo $_SESSION["username"];}?>" required><br>
             <label for="password">Password <span id="passwordAlert" style="color:red; font-size:20px;"></span></label><br>
-            <input type="password" id="password" name="password" value="<?php if(isset($_SESSION["password"])){echo $_SESSION["password"];}?>"><br>
+            <input type="password" id="password" name="password" value="<?php if(isset($_SESSION["password"])){echo $_SESSION["password"];}?>" required><br>
             <p>Already have an account? Proceed to <a href="../Login/login.php">Login</a></p><br>
             <input type="submit" value="Sign Up">
         </form>
